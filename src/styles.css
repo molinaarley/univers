@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* IonIcons global styling */
+.icon:before, .icon:after {
+  font-size: 1.3rem;
+}
+
+
+
+
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -16,7 +25,7 @@ textarea:focus {
 
 .p-tree {
     padding: 0.5rem !important;
-    background: #efefef !important;
+    background: #ffeee4 !important;
 }
 
 .d-flex {
@@ -46,16 +55,8 @@ span.pi.primary:before {
     color: blue;
 }
 
-span.pi.primary-light:before {
-    color: #7486A1;
-}
-
 span.pi.secondary:before {
     color: green;
-}
-
-span.pi.secondary-light:before {
-    color: #67815C;
 }
 
 span.pi.danger:before {
@@ -66,14 +67,17 @@ span.pi.warning:before {
     color: darkorange;
 }
 
-span.pi.warning-light:before {
-    color: #9E8C5B;
-}
-
 span.p-treenode-label span {
     display: flex;
     align-items: center;
+    font-size :8pt;
+    //font-family: "Arial";
 }
+
+.p-popup {
+    font-size :8pt;
+}
+
 
 .p-treenode-content[aria-expanded="true"] .p-buttonset {
     display: none;
@@ -147,6 +151,13 @@ span.p-treenode-label span {
     border-color: #000 !important;
 }
 
+/*
+HIDDEN BUTTON 
+.p-picklist .p-picklist-buttons .p-button:nth-child(2),
+.p-picklist .p-picklist-buttons .p-button:nth-child(4) {
+    display: none !important;
+}*/
+
 .btn-picklist-add {
     display: flex;
     align-items: center;
@@ -183,7 +194,7 @@ button.p-button.p-button-default:hover {
 }
 
 ul.p-tree-container.ng-star-inserted {
-    height: 500px;
+    height: 630px;
 }
 
 .p-dropdown {
@@ -214,56 +225,91 @@ ul.p-tree-container.ng-star-inserted {
     padding-right: 1rem;
 }
 
+/*NEW MODIFF*/
+
+.p-tree .p-tree-container .p-treenode .p-treenode-content {
+    padding: 0rem !important;
+}
+
+.p-orderlist .p-orderlist-header .p-orderlist-title {
+    font-weight: 600;
+    height: 35px !important;
+    font-size: 9pt;
+}
+
+/**********verif*****************/
+.disabledOrderList .p-orderlist .p-orderlist-list {
+    border: 1px solid #dee2e6;
+    background: #dee2e6 !important;
+    color: #212529;
+    padding: 0.5rem 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    pointer-events: none !important;
+ 
+}
+
+.disabledOrderList .p-orderlist .p-orderlist-filter-container .p-orderlist-filter-input {
+    padding-right: 1.75rem;
+    pointer-events: none !important;
+    background: #ddd;
+}
+
+
+/**************natixis********************/
+.natixis--bootstrap body, body.natixis--bootstrap, body .natixis--bootstrap {
+    font-family: BwOstrum,Pluto,Roboto,Verdana,Arial,sans-serif;
+    font-size: 7pt !important;
+    font-style: normal;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    background-color: #ffeee4 !important;
+}
+
+.p-orderlist .p-orderlist-filter-container {
+    padding: 1rem 1.25rem;
+    background: #ffeee4 !important;
+    border: 1px solid #dee2e6;
+    border-bottom: 0 none;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color:#ffeee4 !important;;
+    background-clip: border-box;
+    border: 1pxsolidrgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+/*
 p-message>div {
     width: 100%;
     margin-bottom: 15px !important;
     justify-content: flex-start !important;
+}*/
+
+
+.p-steps .p-steps-item.p-highlight .p-steps-number {
+    background: #208f3a !important;
+    color: #ffffff;
 }
 
-
-/***
-New modifications
-***/
-
-.p-steps-item span.p-steps-number {
-    display: none;
-}
-
-.p-steps .p-steps-item:before {
-    border: none !important;
-}
-
-.p-steps .p-steps-item {
-    background-image: url(assets/img/bg_arrow_step_prev.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 15px 30px;
-    opacity: 1 !important;
-    color: #000;
-}
-
-.p-steps .p-steps-item.p-steps-current~.p-steps-item {
-    background-image: url(assets/img/bg_arrow_step_default.png);
-}
-
-.p-steps .p-steps-item.p-steps-current {
-    background-image: url(assets/img/bg_arrow_step_active.png);
-}
-
-.p-steps .p-steps-item:first-child {
-    margin-left: 0;
-}
-
-.p-steps .p-steps-item a span {
-    margin: 0 !important;
-    color: #000 !important;
+.p-steps .p-steps-item.p-highlight .p-steps-title {
     font-weight: 600;
+    color: #208f3a !important;;
 }
 
-.p-orderlist .p-orderlist-header {
-    height: 58px;
-    overflow: hidden;
-}
+
+
+
+/***********new modif****************/
 
 .statut-step {
     padding: 15px 20px;
@@ -279,8 +325,6 @@ New modifications
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    margin-bottom: 25px;
 }
 
 .p-orderlist-list span.picto span:before {
@@ -299,25 +343,15 @@ New modifications
     margin-left: 0.5rem;
 }
 
-@media (min-width: 1200px) {
-    .p-steps .p-steps-item {
-        width: 25%;
-        margin-left: -25px;
-    }
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    font-size: 10px !important;
 }
 
-@media (max-width: 767px) {
-    .p-steps ul {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .p-steps .p-steps-item.p-steps-current {
-        background-color: #b9c1f4;
-    }
-    .p-steps .p-steps-item {
-        background-color: #15c246;
-    }
-    .p-steps .p-steps-item.p-steps-current~.p-steps-item {
-        background-color: #ccc;
-    }
+.slamargin{
+    margin-right: 5px !important;
 }
+
+
+
