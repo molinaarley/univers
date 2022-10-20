@@ -1,3 +1,13 @@
+
+<ng-container *ngIf="loadingTreeNode">
+  <div class="text-center">
+     <div class="spinner-border" role="status">
+       <span class="sr-only">Loading...</span>
+     </div>
+   </div>
+ </ng-container>
+
+
 # UniversProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
