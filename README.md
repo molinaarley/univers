@@ -14,6 +14,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+
+Hello team, could you confirm to me that every time a job fails, it will be automatically relaunched? Normally, that is the procedure to follow. I'm asking this question because the job PSCRAPP030 (22/05/2023 20:26) didn't work, and it was relaunched on 23/05/2023 at 08:32, which is very late. Could you confirm this for me? Thank you.
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
